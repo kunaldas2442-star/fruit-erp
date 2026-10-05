@@ -3921,7 +3921,7 @@ app.post("/api/backup/restore", requireAuth, async (req: Request, res: Response)
   }
 });
 
-// System flush endpoint for graceful desktop shutdown
+// System flush endpoint for graceful server sync or shutdown
 app.post("/api/system/flush", (req: Request, res: Response) => {
   try {
     const store = loadStore();

@@ -4,9 +4,9 @@
     "passwordHash": "7fc107fdbbcac39a66617eca00b4b38f3b637cbe40e6ea20e924f337fe87ddc407fc38d04f763d9eea52a252f17add18a33f8df8878d74ef14af0909a4bca6a6",
     "salt": "29a54bd01d98866a5df502e2259ba635",
     "mustChangePassword": true,
-    "lastLogin": "2026-10-05T13:17:37.195Z",
-    "dashboardPinSalt": "94244b3fc44ec8034702ce00ebc4e519",
-    "dashboardPinHash": "64b685d644ad757a311c5a838b81f3772449ff0751a2f37532931e073c0c484220989f6d2e3f129ee82ede24733ee9ff139e46170a2fa468606a0289351bc774"
+    "lastLogin": "2026-10-05T13:38:35.861Z",
+    "dashboardPinSalt": "3ce68a4f79bc033a2b014d2be3597af6",
+    "dashboardPinHash": "5daaa061dfe6cb31aa914f215833550e4326a526f741ac7ca2e78dd3423dec3731d573a30abdf775fd1ef86c4fc1f242e580e2465c289a7b1afba7b13c8e5b11"
   },
   "settings": {
     "businessName": "Hari Kripa Fruit Company",
@@ -1234,6 +1234,17 @@
   ],
   "notifications": [
     {
+      "id": "notif-2",
+      "title": "Overdue Customer Receivable",
+      "message": "Royal Supermarket outstanding balance is ₹85,000 (Approaching credit limit ₹2,50,000).",
+      "type": "overdue_customer",
+      "priority": "medium",
+      "severity": "info",
+      "date": "2026-10-05",
+      "read": false,
+      "linkSection": "customers"
+    },
+    {
       "id": "notif-3",
       "title": "Supplier Payment Balance Due",
       "message": "Kashmir Valley Orchard Farms has ₹1,00,000 payable balance remaining.",
@@ -1254,17 +1265,6 @@
       "date": "2026-10-05",
       "read": false,
       "linkSection": "stock"
-    },
-    {
-      "id": "notif-2",
-      "title": "Overdue Customer Receivable",
-      "message": "Royal Supermarket outstanding balance is ₹85,000 (Approaching credit limit ₹2,50,000).",
-      "type": "overdue_customer",
-      "priority": "medium",
-      "severity": "info",
-      "date": "2026-10-05",
-      "read": false,
-      "linkSection": "customers"
     }
   ]
 }

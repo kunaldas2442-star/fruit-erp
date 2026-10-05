@@ -31,10 +31,10 @@ Hostinger provides an integrated Node.js Manager (Phusion Passenger / LiteSpeed 
    * Ensure `data/` and `uploads/` directories exist and are writable (`chmod 755 data uploads`).
 
 2. **Configure Node.js Application in hPanel / cPanel**:
-   * **Node.js Version**: Select `18.x` or `20.x` or `22.x`.
+   * **Node.js Version**: Select `20.x` (or `22.x`).
    * **Application Mode**: Select `Production`.
    * **Application Root**: The path to your project root (e.g., `public_html` or `fresherp`).
-   * **Application Startup File**: Select `dist/server.cjs` (or `server.cjs`). *Note: NEVER select `electron/main.cjs`.*
+   * **Application Startup File**: Select `dist/server.cjs` (or `server.cjs`).
    * **Application URL**: Select your domain/subdomain.
 
 3. **Install Dependencies & Build**:

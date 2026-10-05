@@ -16,8 +16,6 @@ bun.lock
 *sessions.json
 production/backups/
 production/uploads/
-release/
-*.exe
 
 
 

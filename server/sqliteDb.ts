@@ -111,13 +111,10 @@ async function getSqlInstance(): Promise<SqlJsStatic> {
     (globalThis as any).__dirname = currentModuleDir;
   }
 
-  // Locate sql-wasm.wasm whether running from tsx, bundled dist/server.cjs, or packaged Electron
+  // Locate sql-wasm.wasm whether running from tsx or bundled dist/server.cjs
   let wasmBinary: Buffer | undefined;
   const possibleWasmPaths = [
     process.env.SQL_WASM_PATH,
-    typeof process !== "undefined" && (process as any).resourcesPath ? path.join((process as any).resourcesPath, "dist", "sql-wasm.wasm") : null,
-    typeof process !== "undefined" && (process as any).resourcesPath ? path.join((process as any).resourcesPath, "sql-wasm.wasm") : null,
-    typeof process !== "undefined" && (process as any).resourcesPath ? path.join((process as any).resourcesPath, "app.asar.unpacked", "dist", "sql-wasm.wasm") : null,
     path.join(process.cwd(), "dist", "sql-wasm.wasm"),
     path.join(process.cwd(), "node_modules", "sql.js", "dist", "sql-wasm.wasm"),
     path.join(currentModuleDir, "sql-wasm.wasm"),
