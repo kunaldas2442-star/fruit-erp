@@ -7,8 +7,8 @@
   "main": "dist/server.cjs",
   "scripts": {
     "dev": "tsx server.ts",
-    "build": "vite build && node -e \"const fs=require('fs');if(!fs.existsSync('dist'))fs.mkdirSync('dist',{recursive:true});try{fs.copyFileSync('node_modules/sql.js/dist/sql-wasm.wasm','dist/sql-wasm.wasm');}catch(e){}\" && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
-    "postinstall": "npm run build",
+    "build": "vite build && node -e \"const fs=require('fs');if(!fs.existsSync('dist'))fs.mkdirSync('dist',{recursive:true});try{fs.copyFileSync('node_modules/sql.js/dist/sql-wasm.wasm','dist/sql-wasm.wasm');}catch(e){}\" && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --resolve-extensions=.ts,.tsx,.js,.jsx,.json --sourcemap --outfile=dist/server.cjs",
+    "postinstall": "node -e \"if(!require('fs').existsSync('dist/server.cjs'))try{require('child_process').execSync('npm run build',{stdio:'inherit'});}catch(e){console.warn('Postinstall build deferred:',e.message);}\"",
     "prestart": "node -e \"if(!require('fs').existsSync('dist/server.cjs'))require('child_process').execSync('npm run build',{stdio:'inherit'})\"",
     "start": "node dist/server.cjs",
     "clean": "rm -rf dist",
@@ -24,6 +24,7 @@
     "@google/genai": "^2.4.0",
     "@tailwindcss/vite": "^4.1.14",
     "@vitejs/plugin-react": "^5.0.4",
+    "autoprefixer": "^10.4.21",
     "dotenv": "^17.2.3",
     "esbuild": "^0.25.0",
     "express": "^4.21.2",
@@ -35,6 +36,7 @@
     "react": "^19.0.1",
     "react-dom": "^19.0.1",
     "sql.js": "^1.14.2",
+    "tailwindcss": "^4.1.14",
     "vite": "^6.2.3"
   },
   "devDependencies": {
@@ -44,8 +46,6 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@types/sql.js": "^1.4.11",
-    "autoprefixer": "^10.4.21",
-    "tailwindcss": "^4.1.14",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2"
   }

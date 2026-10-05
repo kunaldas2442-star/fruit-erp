@@ -33,7 +33,7 @@ import {
   generateDailySummary,
   generateSmartNotifications,
   getBusinessFAQs,
-} from "./server/erpAiEngine";
+} from "./server/erpAiEngine.ts";
 import {
   getAppDataDirectory,
   initializeSqliteEngine,
@@ -43,7 +43,7 @@ import {
   listDatabaseBackups,
   restoreDatabaseBackup,
   saveSqliteDbToDisk,
-} from "./server/sqliteDb";
+} from "./server/sqliteDb.ts";
 
 dotenv.config();
 
