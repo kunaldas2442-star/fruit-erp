@@ -3955,30 +3955,22 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 
 function getDistPath(): string {
   const root = process.cwd();
-  const candidates: string[] = [];
-
   const effectiveDir =
     typeof (globalThis as any).__dirname !== "undefined"
       ? (globalThis as any).__dirname
       : currentServerDirname;
 
-  if (effectiveDir) {
-    if (path.resolve(effectiveDir) !== path.resolve(root)) {
-      candidates.push(effectiveDir);
-    }
-    candidates.push(path.join(effectiveDir, "dist"));
+  // 1. Direct match if running from dist/server.cjs (where index.html is right alongside server.cjs)
+  if (effectiveDir && fs.existsSync(path.join(effectiveDir, "index.html"))) {
+    return effectiveDir;
   }
-  candidates.push(path.join(root, "dist"));
-  candidates.push(path.resolve("dist"));
-
-  for (const candidate of candidates) {
-    if (
-      candidate &&
-      path.resolve(candidate) !== path.resolve(root) &&
-      fs.existsSync(path.join(candidate, "index.html"))
-    ) {
-      return candidate;
-    }
+  // 2. Standard project root dist directory
+  if (fs.existsSync(path.join(root, "dist", "index.html"))) {
+    return path.join(root, "dist");
+  }
+  // 3. Subdirectory dist from effectiveDir
+  if (effectiveDir && fs.existsSync(path.join(effectiveDir, "dist", "index.html"))) {
+    return path.join(effectiveDir, "dist");
   }
 
   return path.join(root, "dist");
