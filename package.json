@@ -1,0 +1,96 @@
+{
+  "name": "klyia-fresherp",
+  "private": true,
+  "version": "2.4.0",
+  "description": "Offline Wholesale Fruit Trading & Digital Khata ERP Application",
+  "type": "module",
+  "main": "dist/server.cjs",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "vite build && node -e \"const fs=require('fs');if(!fs.existsSync('dist'))fs.mkdirSync('dist',{recursive:true});try{fs.copyFileSync('node_modules/sql.js/dist/sql-wasm.wasm','dist/sql-wasm.wasm');}catch(e){}\" && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
+    "start": "node dist/server.cjs",
+    "desktop": "electron electron/main.cjs",
+    "desktop:win": "npm run build && electron-builder --win --x64",
+    "clean": "rm -rf dist release",
+    "lint": "tsc --noEmit"
+  },
+  "build": {
+    "appId": "com.klyia.fresherp",
+    "productName": "Klyia FreshERP",
+    "copyright": "Copyright © 2026 Klyia Systems",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "dist/sql-wasm.wasm",
+        "to": "dist/sql-wasm.wasm"
+      }
+    ],
+    "asarUnpack": [
+      "dist/sql-wasm.wasm"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "Klyia_FreshERP_Setup_${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Klyia FreshERP",
+      "runAfterFinish": true
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "overrides": {
+    "qs": "^6.16.0"
+  },
+  "dependencies": {
+    "@google/genai": "^2.4.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "@vitejs/plugin-react": "^5.0.4",
+    "dotenv": "^17.2.3",
+    "esbuild": "^0.25.0",
+    "express": "^4.21.2",
+    "jspdf": "^4.2.1",
+    "jspdf-autotable": "^5.0.8",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "multer": "^2.4.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "sql.js": "^1.14.2",
+    "vite": "^6.2.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@types/sql.js": "^1.4.11",
+    "autoprefixer": "^10.4.21",
+    "electron": "^44.3.0",
+    "electron-builder": "^26.15.3",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2"
+  }
+}

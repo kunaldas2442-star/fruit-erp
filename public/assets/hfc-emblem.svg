@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="embGoldOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2D06B" />
+      <stop offset="30%" stop-color="#C89627" />
+      <stop offset="50%" stop-color="#FDF0A6" />
+      <stop offset="70%" stop-color="#BD841A" />
+      <stop offset="100%" stop-color="#8F5E0D" />
+    </linearGradient>
+    <linearGradient id="embGoldInner" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDEAA1" />
+      <stop offset="45%" stop-color="#C89627" />
+      <stop offset="75%" stop-color="#E9C158" />
+      <stop offset="100%" stop-color="#9C670D" />
+    </linearGradient>
+    <radialGradient id="embDiscGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#FFFCF5" />
+      <stop offset="100%" stop-color="#F9F1DC" />
+    </radialGradient>
+    <linearGradient id="embLetterH" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF4D4D" />
+      <stop offset="25%" stop-color="#E51E1E" />
+      <stop offset="75%" stop-color="#B70E0E" />
+      <stop offset="100%" stop-color="#7A0000" />
+    </linearGradient>
+    <linearGradient id="embLetterF" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFA439" />
+      <stop offset="25%" stop-color="#F77100" />
+      <stop offset="75%" stop-color="#D94E00" />
+      <stop offset="100%" stop-color="#9C3400" />
+    </linearGradient>
+    <linearGradient id="embLetterC" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34A853" />
+      <stop offset="25%" stop-color="#1E7E34" />
+      <stop offset="75%" stop-color="#135824" />
+      <stop offset="100%" stop-color="#083814" />
+    </linearGradient>
+    <linearGradient id="embLeafGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#1A6B29" />
+      <stop offset="25%" stop-color="#2DA83D" />
+      <stop offset="50%" stop-color="#4CD45A" />
+      <stop offset="75%" stop-color="#2DA83D" />
+      <stop offset="100%" stop-color="#1A6B29" />
+    </linearGradient>
+    <linearGradient id="embLeafBack" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0D4719" />
+      <stop offset="100%" stop-color="#1A6B29" />
+    </linearGradient>
+    <radialGradient id="embRedApple" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FF7575" />
+      <stop offset="25%" stop-color="#EE1D24" />
+      <stop offset="70%" stop-color="#A5080E" />
+      <stop offset="100%" stop-color="#5E0004" />
+    </radialGradient>
+    <radialGradient id="embGreenApple" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#B4F557" />
+      <stop offset="35%" stop-color="#77C822" />
+      <stop offset="75%" stop-color="#4D960E" />
+      <stop offset="100%" stop-color="#2B5B03" />
+    </radialGradient>
+    <radialGradient id="embOrangeFruit" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFC04D" />
+      <stop offset="35%" stop-color="#FF7A00" />
+      <stop offset="75%" stop-color="#D95300" />
+      <stop offset="100%" stop-color="#8F3200" />
+    </radialGradient>
+    <radialGradient id="embLemonFruit" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFF885" />
+      <stop offset="40%" stop-color="#FED000" />
+      <stop offset="80%" stop-color="#D89E00" />
+      <stop offset="100%" stop-color="#8B6200" />
+    </radialGradient>
+    <radialGradient id="embGreenGrape" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#E2F99C" />
+      <stop offset="45%" stop-color="#9FD639" />
+      <stop offset="80%" stop-color="#6F9E1E" />
+      <stop offset="100%" stop-color="#46660F" />
+    </radialGradient>
+    <radialGradient id="embPurpleGrape" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#C287FF" />
+      <stop offset="35%" stop-color="#732DB3" />
+      <stop offset="75%" stop-color="#451275" />
+      <stop offset="100%" stop-color="#22043D" />
+    </radialGradient>
+  </defs>
+
+  <g transform="translate(-150, 5)">
+    <!-- Outer Gold Rim -->
+    <circle cx="400" cy="245" r="235" fill="url(#embGoldOuter)" />
+    <!-- Secondary Rim -->
+    <circle cx="400" cy="245" r="224" fill="url(#embGoldInner)" />
+    <circle cx="400" cy="245" r="217" fill="#6A4508" opacity="0.6" />
+    <!-- Disc Surface -->
+    <circle cx="400" cy="245" r="215" fill="url(#embDiscGlow)" />
+
+    <!-- "H" Letter in Red -->
+    <path d="M 235 125 L 278 125 L 278 132 L 263 133 L 263 175 L 303 175 L 303 133 L 288 132 L 288 125 L 331 125 L 331 132 L 316 133 L 316 235 L 331 236 L 331 243 L 288 243 L 288 236 L 303 235 L 303 189 L 263 189 L 263 235 L 278 236 L 278 243 L 235 243 L 235 236 L 250 235 L 250 133 L 235 132 Z" fill="url(#embLetterH)" />
+    <path d="M 252 133 L 314 133 L 314 137 L 252 137 Z" fill="#FFA5A5" opacity="0.6" />
+
+    <!-- "F" Letter in Orange -->
+    <path d="M 370 125 L 446 125 L 446 148 L 439 148 L 434 136 L 398 136 L 398 174 L 431 174 L 431 184 L 398 184 L 398 235 L 413 236 L 413 243 L 370 243 L 370 236 L 385 235 L 385 133 L 370 132 Z" fill="url(#embLetterF)" />
+    <path d="M 387 133 L 444 133 L 444 137 L 387 137 Z" fill="#FFE2B8" opacity="0.6" />
+
+    <!-- "C" Letter in Green -->
+    <path d="M 545 136 C 538 129 525 123 507 123 C 475 123 451 147 451 184 C 451 223 476 245 509 245 C 529 245 541 237 549 229 L 553 234 C 543 246 527 252 505 252 C 464 252 436 223 436 184 C 436 144 466 116 507 116 C 529 116 544 123 552 131 Z" fill="url(#embLetterC)" />
+
+    <!-- Fruits -->
+    <!-- Green Grapes -->
+    <circle cx="218" cy="272" r="16" fill="url(#embGreenGrape)" />
+    <circle cx="238" cy="258" r="16" fill="url(#embGreenGrape)" />
+    <circle cx="258" cy="270" r="16" fill="url(#embGreenGrape)" />
+    <circle cx="230" cy="290" r="16" fill="url(#embGreenGrape)" />
+    <circle cx="252" cy="292" r="16" fill="url(#embGreenGrape)" />
+    <circle cx="274" cy="278" r="15" fill="url(#embGreenGrape)" />
+
+    <!-- Red Apple -->
+    <path d="M 360 258 C 363 248 370 242 376 244" stroke="#42280C" stroke-width="4" stroke-linecap="round" fill="none" />
+    <path d="M 358 262 C 342 250 318 258 308 278 C 294 306 302 342 328 358 C 344 368 360 364 366 358 C 372 364 388 368 404 358 C 426 344 434 308 420 278 C 410 258 386 250 370 262 C 366 265 362 265 358 262 Z" fill="url(#embRedApple)" />
+    <ellipse cx="340" cy="275" rx="14" ry="7" fill="#FFFFFF" opacity="0.45" transform="rotate(-25 340 275)" />
+
+    <!-- Green Apple -->
+    <path d="M 436 266 C 438 258 443 253 448 255" stroke="#42280C" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M 434 270 C 422 260 404 266 396 282 C 385 304 391 334 411 348 C 424 356 437 353 442 348 C 447 353 460 356 473 348 C 491 336 497 306 486 282 C 478 266 460 260 448 270 C 444 273 438 273 434 270 Z" fill="url(#embGreenApple)" />
+
+    <!-- Purple Grapes -->
+    <circle cx="488" cy="270" r="14" fill="url(#embPurpleGrape)" />
+    <circle cx="506" cy="262" r="14" fill="url(#embPurpleGrape)" />
+    <circle cx="522" cy="272" r="14" fill="url(#embPurpleGrape)" />
+    <circle cx="496" cy="290" r="14" fill="url(#embPurpleGrape)" />
+    <circle cx="516" cy="288" r="14" fill="url(#embPurpleGrape)" />
+    <circle cx="536" cy="284" r="13" fill="url(#embPurpleGrape)" />
+
+    <!-- Orange -->
+    <circle cx="576" cy="302" r="48" fill="url(#embOrangeFruit)" />
+    <ellipse cx="554" cy="280" rx="14" ry="7" fill="#FFF2D6" opacity="0.55" transform="rotate(-35 554 280)" />
+
+    <!-- Lemon -->
+    <path d="M 648 296 C 666 280 674 278 680 286 C 676 294 670 312 654 326 C 636 340 608 338 596 322 C 590 312 596 298 610 286 C 624 276 640 282 648 296 Z" fill="url(#embLemonFruit)" />
+
+    <!-- Leaf Bowl -->
+    <path d="M 180 285 C 228 368 316 406 400 406 C 484 406 572 368 620 285 C 568 358 480 388 400 388 C 320 388 232 358 180 285 Z" fill="url(#embLeafGrad)" />
+    <path d="M 198 296 C 246 362 322 394 400 394 C 478 394 554 362 602 296 C 552 354 476 384 400 384 C 324 384 248 354 198 296 Z" fill="#8CF896" opacity="0.75" />
+  </g>
+</svg>
