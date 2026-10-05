@@ -4,9 +4,9 @@
     "passwordHash": "7fc107fdbbcac39a66617eca00b4b38f3b637cbe40e6ea20e924f337fe87ddc407fc38d04f763d9eea52a252f17add18a33f8df8878d74ef14af0909a4bca6a6",
     "salt": "29a54bd01d98866a5df502e2259ba635",
     "mustChangePassword": true,
-    "lastLogin": "2026-10-05T12:43:38.125Z",
-    "dashboardPinSalt": "c58636a099f47721d7cd9d61be339a20",
-    "dashboardPinHash": "7ec57b9b32fe5faf29fff433dd5ee3b61d7e639685d834ef733d07d152afb0a291f584828583e007d76eae2a6590556650cd5c46aab4c9d3600092609dbc91c4"
+    "lastLogin": "2026-10-05T13:17:37.195Z",
+    "dashboardPinSalt": "94244b3fc44ec8034702ce00ebc4e519",
+    "dashboardPinHash": "64b685d644ad757a311c5a838b81f3772449ff0751a2f37532931e073c0c484220989f6d2e3f129ee82ede24733ee9ff139e46170a2fa468606a0289351bc774"
   },
   "settings": {
     "businessName": "Hari Kripa Fruit Company",
